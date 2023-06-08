@@ -101,6 +101,7 @@ const Form = ({ addMember, member, updateMember }) => {
             type="email"
             name="email"
             id="email"
+            data-cy= "email-input"
             onChange={inputChangeHandler}
             value={formData.email}
             invalid={!!formErrs.email}
@@ -113,6 +114,7 @@ const Form = ({ addMember, member, updateMember }) => {
             type="text"
             name="name"
             id="name"
+            data-cy= "name-input"
             onChange={inputChangeHandler}
             value={formData.name}
             invalid={!!formErrs.name}
@@ -125,6 +127,7 @@ const Form = ({ addMember, member, updateMember }) => {
             type="text"
             name="surname"
             id="surname"
+            data-cy="surname-input"
             onChange={inputChangeHandler}
             value={formData.surname}
             invalid={!!formErrs.surname}
@@ -137,6 +140,7 @@ const Form = ({ addMember, member, updateMember }) => {
             type="password"
             name="password"
             id="password"
+            data-cy="password-input"
             onChange={inputChangeHandler}
             value={formData.password}
             invalid={!!formErrs.password}
@@ -152,10 +156,11 @@ const Form = ({ addMember, member, updateMember }) => {
             onChange={inputCheckboxHandler}
             checked={formData.termsService}
             invalid={!!formErrs.termsService}
+            data-cy="terms-checkbox"
           />
           <FormFeedback>{formErrs.termsService}</FormFeedback>
         </FormGroup>
-        <Button type="submit" disabled={!valid} style={{marginRight :"2%"}}>
+        <Button type="submit" disabled={!valid} style={{marginRight :"2%"}} data-cy="submit-button">
           {member ? "Güncelle" : "Ekle"}
         </Button>
         <Button type="button" onClick={resetForm}>

@@ -35,7 +35,7 @@ const App = () => {
       <h2 style={{marginTop:"3%", color:" rgb(39, 86, 114)" }}>Ekip Üyeleri Listesi </h2>
       <ul>
         {memberList.map((member, index) => (
-          <div className="member" key={index}>
+          <div data-cy="teamList" className="member" key={index}>
             <p>İsim-Soyisim: {member.name} {member.surname}</p>
             <p>E-posta: {member.email}</p>
             <button onClick={() => editMember(member)}>Düzenle</button>
